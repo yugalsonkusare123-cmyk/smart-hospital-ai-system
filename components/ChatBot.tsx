@@ -27,9 +27,11 @@ const QUICK_REPLIES = [
 ];
 
 export default function ChatBot({
-  openFromHero,
+  openFromHero = false,
+  onHeroChatOpened,
 }: {
   openFromHero?: boolean;
+  onHeroChatOpened?: () => void;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
